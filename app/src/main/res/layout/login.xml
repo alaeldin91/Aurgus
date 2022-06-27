@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.aurages.ArestaurantWeb.Activity.Login"
+    android:layoutDirection="ltr"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/pin_bg"
+    >
+<!--Aurages@2019#-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="4"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4">
+            <LinearLayout
+                android:id="@+id/main_contaner_lay"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp">
+                <EditText
+                    android:id="@+id/login_username"
+                    android:background="@drawable/shape_bg_rectangle_username"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:hint="Username"
+
+                    android:textColorHint="@android:color/white"
+                    android:textColor="@android:color/white"
+                    android:minLines="1"
+                    android:maxLines="1"
+                    android:lines="1"
+                    />
+                <EditText
+                    android:id="@+id/login_pass"
+                    android:background="@drawable/shape_bg_rectangle_username"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:hint="Password"
+                    android:textColorHint="@android:color/white"
+                    android:textColor="@android:color/white"
+                    android:inputType="textPassword"
+                    android:minLines="1"
+                    android:maxLines="1"
+                    android:lines="1"
+                    />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_reg_by_phone"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Login"
+                    android:textColor="@android:color/white"
+                    android:textSize="30sp"
+                    android:background="@drawable/shape_bg_rectangle_btn_login"/>
+                <TextView
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Forget Your password?"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/login_forget_pass_btn"/>
+
+
+            </LinearLayout>
+            <com.github.ybq.android.spinkit.SpinKitView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/progressBar"
+                style="@style/SpinKitView.Large.Circle"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center"
+                app:SpinKit_Color="@android:color/white"
+                android:visibility="invisible"
+                android:layout_below="@+id/main_contaner_lay"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="30dp"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <View
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"/>
+                <View
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="4">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="5dp"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="@android:color/white"
+                        android:src="@drawable/facebook"
+                        android:background="@android:color/transparent"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="5dp"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="@android:color/white"
+                        android:src="@drawable/userimg"
+                        android:background="@android:color/transparent"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="5dp"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="@android:color/white"
+                        android:src="@drawable/twitter"
+                        android:background="@android:color/transparent"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="5dp"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="@android:color/white"
+                        android:src="@drawable/userimg"
+                        android:background="@android:color/transparent"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/login_card"
+        android:layout_margin="10dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:padding="5dp"
+                        android:background="@android:color/transparent"
+
+                        android:drawablePadding="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Username"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#808080"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    app:passwordToggleEnabled="false"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:padding="5dp"
+                        android:background="@android:color/transparent"
+                        android:drawablePadding="5dp"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="password"
+                        android:inputType="textPassword"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#808080"/>
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:textColor="@android:color/white"
+                android:layout_width="250dp"
+                android:layout_height="48dp"
+                android:text="Login"
+                android:layout_below="@+id/login_card"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_rectangle"
+                android:layout_marginTop="5dp"
+                android:id="@+id/btn_reg_by_phone2"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        app:navigationIcon="@drawable/icbackspace_toolbar"
+        android:id="@+id/public_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        app:layout_collapseMode="pin"
+        style="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Login"
+        app:titleTextColor="#fff"/>
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/rectanglebg">
+
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="two"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:textSize="40sp"-->
+<!--        android:textStyle="bold"/>-->
+
+    <include layout="@layout/adapter_allbillsview2"/>
+    <include layout="@layout/adapter_allbillsview2"/>
+    <include layout="@layout/adapter_allbillsview2"/>
+    <include layout="@layout/adapter_allbillsview2"/>
+    <include layout="@layout/adapter_allbillsview2"/>
+    <include layout="@layout/adapter_allbillsview2"/>
+    <include layout="@layout/adapter_allbillsview2"/>
+
+
+
+</LinearLayout>

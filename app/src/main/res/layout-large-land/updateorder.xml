@@ -1,0 +1,183 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cold"
+    android:minWidth="1000dp"
+    android:minHeight="1000dp"
+    tools:ignore="MissingDefaultResource"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="700dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/table_layers"
+
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical"
+                    android:layout_marginRight="10dp"
+                    >
+
+                    <TableRow
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5.5">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1dp"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="0.5"
+                            android:background="@color/text"
+                            android:gravity="center"
+                            android:text="No" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="0.5dp"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="2"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:text="Item" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="0.8"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:text="@string/price" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="2"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:text="Qty" />
+
+                    </TableRow>
+                </LinearLayout>
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/data_list_view_order_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    >
+                </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="700dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/table_lay"
+
+                android:layout_alignParentBottom="true"
+
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:visibility="visible">
+
+                <TableRow
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="0.2"
+                        android:background="@color/text"
+                        android:gravity="center"
+                        android:text="No" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:gravity="center"
+                        android:text="Item" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:gravity="center"
+                        android:text="Total" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="0.8"
+                        android:background="@android:color/white"
+                        android:gravity="center"
+                        android:text="@string/Discount" />
+
+
+                </TableRow>
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/data_list_view_order"
+
+                android:layout_width="match_parent"
+                android:background="@color/cold"
+
+                android:layout_height="wrap_content"
+               >
+            </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

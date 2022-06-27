@@ -1,0 +1,30 @@
+R_DEF: Internal format may change without notice
+local
+id btnActive
+id editTextActiveKey
+id editTextAddress
+id editTextEmail
+id editTextIMEI
+id editTextName
+id editTextPhone
+id editTextRemark
+id layoutTitle
+id textStatus
+id textTitle
+layout activity_activation
+layout dialog_local_active
+string Active_key
+string IMEI
+string activation
+string address
+string app_name
+string close
+string email
+string name
+string phone
+string please_wait
+string remark
+string request_activation
+string validating_sec_settings
+style AppBaseTheme
+style AppTheme

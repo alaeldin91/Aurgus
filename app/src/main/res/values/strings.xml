@@ -1,0 +1,65 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Waiter Aruguse</string>
+    <string name="title" tools:ignore="MissingTranslation">Aurages Restruants</string>
+    <string name="first_name" tools:ignore="MissingTranslation">enter your first name</string>
+    <string name="BINCODE" tools:ignore="MissingTranslation">BIN CODE</string>
+    <string name="Login" tools:ignore="MissingTranslation">Login</string>
+    <string name="file_provider_authority">com.skyhope.textrecognizer.file_provider</string>
+
+    <string name="EmployeeName" tools:ignore="MissingTranslation">Employee Name</string>
+    <string name="enterbincode" tools:ignore="MissingTranslation">enter your bincode</string>
+    <string name="synchronizing" tools:ignore="MissingTranslation">Synchronizing...</string>
+    <string name="branchsuccess" tools:ignore="MissingTranslation">branch success</string>
+    <string name="branchinsert" tools:ignore="MissingTranslation">branch insert success</string>
+    <string name="brancherror" tools:ignore="MissingTranslation">branch error</string>
+    <string name="branchinserterror" tools:ignore="MissingTranslation"> branch insert error </string>
+    <string name="branchdone" tools:ignore="MissingTranslation">branch done</string>
+    <string name="branchinsertsuccess" tools:ignore="MissingTranslation">branch insert success</string>
+    <string name="branchnodata" tools:ignore="MissingTranslation">branch no data</string>
+    <string name="network" tools:ignore="MissingTranslation">network</string>
+<string name="networkerror" tools:ignore="MissingTranslation">network error</string>
+    <string name="nointernet" tools:ignore="MissingTranslation">no Internet</string>
+    <string name="nointernetaccess" tools:ignore="MissingTranslation"> no internet access</string>
+    <string name="Settings">Settings</string>
+        <string name="Connection">Connection</string>
+        <string name="Server">Server</string>
+        <string name="DataBase">DataBase</string>
+        <string name="User">DataBase User</string>
+        <string name="Pass">DataBase Pass</string>
+        <string name="mes_sccess">Import Successfully</string>
+        <string name="Status">Status</string>
+        <string name="Online">Online</string>
+        <string name="Offline">Offline</string>
+        <string name="Total">Total</string>
+        <string name="Discount">Discount</string>
+        <string name="Tax">Tax</string>
+        <string name="EndTotal">End Total</string>
+        <string name="EditHint" translatable="false">0.00</string>
+        <string name="AskExit"> Are you sure you want to exit? </string>
+        <string name="Yes">Yes</string>
+        <string name="No">No</string>
+        <string name="Loading"> Loading ... </string>
+        <string name="ImportTable">Import Table</string>
+        <string name="AskForOrderType"> Ask For Order Type </string>
+        <string name="Orders"> Orders </string>
+        <string name="NumColumnGridMats"> Num Column Grid Mats </string>
+        <string name="open_drawer">Open drawer</string>
+        <string name="close_drawer">Close drawer</string>
+        <string name="bill_reports">Bills Reports</string>
+        <string name="colse_time">Close Time</string>
+
+    <string name="categorie">categories</string>
+    <string name="wilaya">State</string>
+    <string name="price">Price</string>
+    <string name="max">max</string>
+    <string name="min_rating">min rating</string>
+    <string name="promotions">promotions</string>
+    <string name="filter">filter</string>
+    <string name="reinitialize">reinitialize</string>
+
+    <string-array name="filter_options">
+        <item>Randome</item>
+        <item>Price(Low to High)</item>
+        <item>Price(High to Low)</item>
+    </string-array>
+</resources>

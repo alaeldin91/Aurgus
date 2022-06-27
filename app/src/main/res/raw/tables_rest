@@ -1,0 +1,435 @@
+
+ 
+CREATE TABLE IF NOT EXISTS Groups(   
+  Guid uniqueidentifier PRIMARY KEY,   
+  Number INTEGER,   
+  Code VARCHAR(255),   
+  Name VARCHAR(255),   
+  EnglishName VARCHAR(255),   
+  FrenchName VARCHAR(255),   
+  ShowId INTEGER,   
+  Color VARCHAR(50),   
+  Notes VARCHAR(50),   
+  RestNumber SMALLINT,   
+  ImageGuid uniqueidentifier,   
+  User INTEGER,   
+  ColorR INTEGER,   
+  ColorB INTEGER,   
+  ColorG INTEGER,
+  Used bit
+) 
+GO
+
+
+
+
+CREATE TABLE IF NOT EXISTS Images(   
+   Guid uniqueidentifier PRIMARY KEY,   
+   PictureData image   
+) 
+GO
+
+
+
+
+CREATE TABLE IF NOT EXISTS OrderOptions(
+  Guid uniqueidentifier PRIMARY KEY,  
+  Name VARCHAR(255),
+  EnglishName VARCHAR(255),  
+  sku VARCHAR(255),
+  cost INTEGER,
+  tax INTEGER,
+  price INTEGER,
+  unit  VARCHAR(255),
+  addByUserId VARCHAR(255),
+    created_at  VARCHAR(255),
+  updated_at  VARCHAR(255),
+    code INTEGER,
+    product_id VARCHAR(255),
+    modifire_id VARCHAR(255)
+
+
+)
+GO 
+
+
+CREATE TABLE IF NOT EXISTS Tables(
+ id varchar(36) PRIMARY KEY ,
+ Name varchar (255) ,
+ number int ,
+ ChairsNumber int ,
+ MaxChairsNumber int ,
+ status int ,
+ floor_id varchar (36) ,
+ branch_id varchar (36)  ,
+ addByUserId varchar (36)  ,
+ created_at varchar (255),
+ updated_at varchar (255)
+)
+GO
+
+
+
+
+CREATE TABLE IF NOT EXISTS TablesPlaces (
+ Guid uniqueidentifier PRIMARY KEY,
+ Number int NULL,
+ Code varchar (255) ,
+ Name varchar (255) ,
+ EnglishName varchar (255) ,
+ FrenchName varchar (255) ,
+ Notes varchar (1000) ,
+ HostGuid uniqueidentifier NULL,
+ UserGuid uniqueidentifier NULL,
+ TablePrinter int NULL,
+ PrintCopies int NULL,
+ PrinterName varchar (255) NULL
+)
+GO
+
+
+CREATE TABLE IF NOT EXISTS CustsDetails(
+  Guid uniqueidentifier  NOT NULL,
+  CustGuid uniqueidentifier  NULL,
+  Phone varchar (255) NULL,
+  PhoneNumber varchar (50) NULL,
+  Notes varchar (1000) NULL,
+  Address varchar (1000) NULL
+)
+GO
+
+
+
+
+
+
+CREATE TABLE IF NOT EXISTS MatOrderOptions (
+  Guid uniqueidentifier NOT NULL,
+  MatGuid uniqueidentifier NULL,
+  OrderOptionGuid uniqueidentifier NULL,
+  Qty float NULL
+) 
+GO
+
+
+
+
+CREATE TABLE IF NOT EXISTS WebOrders(
+  ID INTEGER PRIMARY KEY AUTOINCREMENT,
+  Guid varchar(255),
+  Number int ,
+  DailyNumber int,
+  BillKind varchar (255),
+  Date datetime,
+  BillDate datetime,
+  DeliveryDate datetime,
+  BillState varchar (255),
+  TableCode varchar (255),
+  CustomCode varchar (255),
+  Total double ,
+  Discount float,
+  DiscountPercent varchar (255),
+  Extra float,
+  Tax float,
+  Payment varchar (255),
+  Service float,
+  Notes varchar (1000),
+  UserCode varchar (255),
+  Printed smallint,
+    Remain float,
+  BranchCode varchar (255),
+ SaveOrder bit DEFAULT 0
+
+
+)
+GO
+
+
+CREATE TABLE IF NOT EXISTS WebOrderDetails(
+  ID INTEGER PRIMARY KEY AUTOINCREMENT,
+  Number int ,
+  OrderNumber int,
+  OrderID varchar (255),
+  MatCode varchar (255),
+  Qty float,
+  Price float,
+  Notes varchar (1000),
+  OrderType int,
+  BillType int,
+  HostCode varchar (255),
+  Printed smallint,
+  IsChecked bit,
+  Export bit,
+  ParentOrder int,
+  SaveOrderDetails int,
+  BillDate datetime
+)
+GO
+
+
+CREATE TABLE IF NOT EXISTS categories(
+  ID varchar (36) PRIMARY KEY,
+  name  varchar (255) ,
+  sku  varchar (255) ,
+  timedEventFrom varchar (255) ,
+  timedEventTo varchar (255),
+  active int,
+  cat_id varchar (255),
+  image varchar (255),
+  addByUserId varchar (36),
+  created_at timestamp ,
+  updated_at timestamp ,
+  code int ,
+  menu_id  varchar(255),
+  category_id varchar(255)
+)
+GO
+
+
+CREATE TABLE IF NOT EXISTS floors(
+  ID varchar (36) PRIMARY KEY,
+  name  varchar (255) ,
+  description  TEXT NULL ,
+  menu_id varchar (36) ,
+  branch_id varchar (36),
+  addByUserId varchar (36),
+  created_at varchar(255),
+  updated_at varchar(255)
+)
+GO
+CREATE TABLE IF NOT EXISTS Bill(
+  ID varchar (36) PRIMARY KEY,
+  BillKindNumber int,
+  BillKindName  varchar (255) ,
+  BillKindNameEnglish varchar (36) ,
+  addByUserId varchar (36),
+  created_at varchar(255),
+  updated_at varchar(255)
+)
+GO
+
+CREATE TABLE IF NOT EXISTS menus(
+  id varchar (36) PRIMARY KEY,
+  name  varchar (255) ,
+  description  TEXT ,
+  addByUserId varchar (36),
+  created_at timestamp,
+  updated_at timestamp
+)
+GO
+
+CREATE TABLE IF NOT EXISTS modifires(
+  ID varchar (36) PRIMARY KEY,
+  nameAr  varchar (255) ,
+  nameEn  varchar (255) ,
+  sku  varchar (255) ,
+  cost  double ,
+  tax double ,
+  price double ,
+  unit varchar(255),
+  addByUserId varchar (36),
+  created_at varchar(255),
+  updated_at varchar(255),
+  code int,
+  product_id varchar (36),
+  modifier_id varchar(36)
+)
+GO
+CREATE TABLE IF NOT EXISTS printer(
+  ID varchar (36) PRIMARY KEY,
+  name  varchar (255) ,
+  enName  varchar (255) ,
+  printer varchar (255) ,
+  printerName varchar (255),
+  printerIndex int
+  copiesNumber int,
+  note varchar (255),
+  branch_id varchar (255),
+
+  addByUserId varchar (36),
+  created_at varchar(255) ,
+  updated_at varchar(255)
+)
+GO
+CREATE TABLE IF NOT EXISTS permissions(
+  ID varchar (36) PRIMARY KEY,
+  name  varchar (255) ,
+  guard_name  varchar (255) ,
+  created_at timestamp,
+  updated_at timestamp
+)
+GO
+
+CREATE TABLE IF NOT EXISTS roles(
+  ID varchar (36) PRIMARY KEY,
+  name  varchar (255) ,
+  guard_name  varchar (255) ,
+  created_at timestamp,
+  updated_at timestamp
+)
+GO
+
+CREATE TABLE IF NOT EXISTS role_has_permissions(
+  permission_id varchar (36) ,
+  role_id  varchar (36)
+  )
+GO
+CREATE TABLE IF NOT EXISTS Payment(
+  ID varchar (36) PRIMARY KEY,
+  name  varchar (255) ,
+  eName varchar (255) ,
+  value  int ,
+  type  int ,
+  defaults	int ,
+  note varchar (255) ,
+  addByUserId varchar(36) ,
+  created_at varchar (255) ,
+  updated_at varchar (255)
+)
+GO
+CREATE TABLE IF NOT EXISTS Printers(
+  ID varchar (36) PRIMARY KEY,
+  name  varchar (255) ,
+  eName varchar (255) ,
+  printer  varchar (36) ,
+  printerName  varchar (36) ,
+  printerIndex  int ,
+  copiesNumber	int ,
+  note varchar (255) ,
+  branch_id varchar (36) ,
+  addByUserId varchar(36) ,
+  created_at varchar (255) ,
+  updated_at varchar (255)
+)
+GO
+
+CREATE TABLE IF NOT EXISTS table_reserves(
+  ID varchar (36) PRIMARY KEY,
+  customerPhone  varchar (255) ,
+  dateFrom  varchar (255) ,
+  dateTo  varchar (255) ,
+  payment  double,
+Minorder  double ,
+  minorderValue	double ,
+  enterFee	double ,
+  note varchar (255) ,
+  startDate varchar (255) ,
+  total double ,
+  addByUserId char(36) ,
+  floor_idIndex char(36) ,
+  created_at timestamp,
+  updated_at timestamp
+)
+GO
+
+CREATE TABLE IF NOT EXISTS users(
+  ID varchar (36) PRIMARY KEY,
+  firstName  varchar (255) ,
+  LastName  varchar (255) ,
+  name  varchar (255) ,
+  email varchar (255) ,
+  password varchar (255) ,
+  admin	int ,
+  addByUserId	varchar (255) ,
+  note varchar (255) ,
+  businessName	varchar(255)	,
+  type	varchar(255) ,
+  enable int ,
+  active int ,
+  activeStatus	int(11),
+  barCode	varchar(255) ,
+  binCode	int(11) ,
+  isAdmin	int(11) ,
+  subscrib	int(11) ,
+  agree	int(11) ,
+  RESTURANT	int(11) ,
+  ACCOUNTING	int(11) ,
+  HR	int(11) ,
+  branch_number	int(11) ,
+  user_number	int(11) ,
+  payment	int(11) ,
+  phone	varchar(255) ,
+  country	varchar(255) ,
+  state	varchar(255) ,
+  city	varchar(255) ,
+  email_verified_at	timestamp ,
+  remember_token	varchar(100) ,
+  created_at timestamp,
+  updated_at timestamp
+)
+GO
+
+CREATE TABLE IF NOT EXISTS branches(
+  id uniqueidentifier PRIMARY KEY,
+  name  varchar (255) ,
+  slugable  varchar (255) ,
+  delivery_price  varchar (255) ,
+  address_address  varchar (255) ,
+  monday_from varchar (255) ,
+  monday_to varchar (255) ,
+  tuesday_from varchar (255) ,
+  tuesday_to varchar (255) ,
+  wednesday_from varchar (255) ,
+  wednesday_to varchar (255) ,
+  Wednesdayfrom varchar (255) null,
+  Wednesdayto varchar (255) null,
+  thursday_from  varchar (255) ,
+  thursday_to  varchar (255) ,
+  friday_from  varchar (255) ,
+  friday_to  varchar (255) ,
+  saturday_from varchar (255) ,
+  saturday_to varchar (255) ,
+  sunday_from varchar (255) ,
+  sunday_to varchar (255) ,
+  tax double ,
+  phone  varchar (255) ,
+  addByUserId varchar (36),
+  created_at varchar (255) ,
+  updated_at varchar (255)
+)
+GO
+
+CREATE TABLE IF NOT EXISTS products(
+  ID varchar (36) PRIMARY KEY,
+  nameAr  varchar (255) ,
+  descriptionAr  varchar (255) ,
+  nameEn  varchar (255) ,
+  descriptionEn  varchar (255) ,
+  note  varchar (255) ,
+  sku  varchar (255) ,
+  price varchar (255) ,
+  sellType  varchar (255) ,
+  tax double ,
+  timedEventFrom  varchar (255) ,
+  timedEventTo  varchar (255) ,
+  active int ,
+  image Varchar (255),
+  printer_id varchar (36),
+  class_id varchar (36),
+  category_id varchar(36),
+  addByUserId  varchar (36) ,
+  created_at varchar (255),
+   updated_at varchar(255),
+  code int
+)
+GO
+
+CREATE TABLE IF NOT EXISTS ingredients(
+  ID varchar (36) PRIMARY KEY,
+  nameAr  varchar (255) ,
+  nameEn  varchar (255) ,
+  note varchar (255) ,
+  price int,
+  unit  varchar (255) ,
+  sku varchar (255),
+
+  addByUserId  varchar (36) ,
+  created_at varchar (255),
+  updated_at varchar (255),
+  code int,
+  product_id varchar (255),
+  ingredient varchar (255),
+  quantity_id int
+
+)
+GO

@@ -1,0 +1,44 @@
+CREATE TABLE IF NOT EXISTS AnLogin (
+  ID INTEGER PRIMARY KEY AUTOINCREMENT ,
+  IP VARCHAR(75) ,
+  DB VARCHAR(150) ,
+  User VARCHAR(150) ,
+  Pass VARCHAR(150)
+)
+GO
+
+
+CREATE TABLE IF NOT EXISTS AnOptions (
+  ID INTEGER PRIMARY KEY AUTOINCREMENT ,
+  Key VARCHAR(250) ,
+  value VARCHAR(250) ,
+  Date DateTime
+)
+GO
+
+
+CREATE TABLE IF NOT EXISTS Temp_orders(  
+  ID INTEGER PRIMARY KEY AUTOINCREMENT ,
+  Guid uniqueidentifier,  
+  Name VARCHAR(250),
+  EnglishName VARCHAR(250),
+  Qty float,
+  Price float,
+  Notes VARCHAR(255),
+  Type INTEGER DEFAULT 1,
+  Append INTEGER DEFAULT 0,
+  IsChecked INTEGER DEFAULT 0,
+  IsDelivered INTEGER DEFAULT 0 ,
+  view_state INTEGER DEFAULT 0 ,
+  MatCode varchar (255)
+
+)
+GO
+
+CREATE TABLE IF NOT EXISTS Error_log(
+  ID INTEGER PRIMARY KEY AUTOINCREMENT ,
+  Error_no VARCHAR(250),
+  Error_txt VARCHAR(250)
+)
+GO
+

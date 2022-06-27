@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/cold"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:visibility="visible"
+        android:id="@+id/public_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent"
+        app:layout_collapseMode="pin"
+        style="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="All Bills"
+        app:titleTextColor="#fff"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_marginTop="?attr/actionBarSize"
+        android:id="@+id/viewdialogtab"
+        android:layout_width="match_parent"
+        android:background="@color/cold"
+        android:layout_height="?attr/actionBarSize"
+        app:tabGravity="fill"
+        app:tabMode="auto"
+        />
+    <androidx.viewpager.widget.ViewPager
+        android:layout_margin="30dp"
+        android:background="@color/cold"
+        android:id="@+id/viewdialogviewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/viewdialogtab"/>
+    <ImageButton
+        android:id="@+id/close_tab"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+       android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+         android:layout_marginEnd="38dp"
+        android:layout_marginRight="38dp"
+        android:padding="5dp"
+        app:srcCompat="@drawable/ic_clear_white"
+        tools:ignore="VectorDrawableCompat" />
+
+
+
+
+</RelativeLayout>

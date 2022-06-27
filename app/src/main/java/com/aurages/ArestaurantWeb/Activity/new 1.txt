@@ -1,0 +1,165 @@
+package com.example.drivers.service;
+
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+import android.location.Address;
+import android.location.Geocoder;
+import android.media.RingtoneManager;
+import android.net.Uri;
+import android.os.Build;
+import android.widget.Toast;
+
+import com.example.drivers.R;
+import com.example.drivers.activity.CustomerCallActivity;
+import com.example.drivers.common.Common;
+import com.example.drivers.model.firebase.Pickup;
+import com.example.drivers.model.firebase.User;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.messaging.FirebaseMessagingService;
+import com.google.firebase.messaging.RemoteMessage;
+import com.google.gson.Gson;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
+
+import androidx.annotation.NonNull;
+import androidx.core.app.NotificationCompat;
+import androidx.core.content.ContextCompat;
+
+public class firebaseMessaging extends FirebaseMessagingService {
+    NotificationCompat.Builder builder;
+    public    String phone ;
+    public Double riderlatuide;
+    public Double riderLonglatuide;
+    public String destination;
+
+
+    @Override
+    public void onMessageReceived(RemoteMessage remoteMessage) {
+        if (remoteMessage.getNotification().getTitle().equals("طلب")) {
+
+            notificationActions(remoteMessage.getNotification().getBody());
+            //       notificationActions(remoteMessage.getNotification().getBody());
+
+        }
+    }
+
+
+    private void notificationActions(String desc) {
+
+        int NOTIFICATION_ID = 1;
+
+
+        Intent intent = new Intent(getBaseContext(), CustomerCallActivity.class);
+        Pickup pickup = new Gson().fromJson(desc, Pickup.class);
+
+        riderlatuide=pickup.getLat();
+
+        riderLonglatuide=pickup.getLng();
+        Geocoder geocoder = new Geocoder(getBaseContext(), Locale.getDefault());
+
+        List<Address> addresses = null;
+        try {
+            addresses = geocoder.getFromLocation(riderlatuide,riderLonglatuide, 1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Address obj = addresses.get(0);
+        destination = obj.getAddressLine(0);
+        destination = destination + "\n" + obj.getCountryName();
+
+
+        String rider= pickup.getID();
+        FirebaseDatabase.getInstance().getReference(Common.user_rider_tbl)
+                .child(rider).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User user=snapshot.getValue(User.class);
+                phone= user.getPhone_number();
+                String txt_desc = "رقم الهاتف:"+"   "+"  " + phone +"  "+"      "+"الواجهة:"+destination;   }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+        String txt_desc = "رقم الهاتف:"+"   "+"  " + phone +"  "+"      "+"الواجهة:"+destination;
+        intent.putExtra("lat", pickup.getLat());
+        intent.putExtra("lng", pickup.getLng());
+        intent.putExtra("rider", pickup.getID());
+        intent.putExtra("token", pickup.getToken());
+
+        try {
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                CharSequence name = getString(R.string.channel_arrived);
+                String description = getString(R.string.channel_arrived_descrition);
+                int importance = NotificationManager.IMPORTANCE_DEFAULT;
+                NotificationChannel channel = new NotificationChannel(Common.CHANNEL_ID_ARRIVED, name, importance);
+                channel.setDescription(description);
+                NotificationManager notificationManager = getSystemService(NotificationManager.class);
+                notificationManager.createNotificationChannel(channel);
+            }
+            Intent buttonIntent = new Intent(getBaseContext(), NotificationReceiver.class);
+
+            PendingIntent dismissIntent = PendingIntent.getBroadcast(getBaseContext(), 0, buttonIntent, 0);
+
+            Uri defaultSoundUri= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+            PendingIntent pendingIntent = PendingIntent.getActivity(getBaseContext(), 0, intent, 0);
+            builder = new NotificationCompat.Builder(getBaseContext());
+            builder.setSmallIcon(R.drawable.googleg_standard_color_18);
+            builder.setColor(ContextCompat.getColor(getBaseContext(), R.color.colorPrimaryDark));
+            builder.setContentTitle("طلب")
+                    .setWhen(System.currentTimeMillis()).;
+            builder. setStyle(new NotificationCompat.BigTextStyle().bigText(txt_desc));;
+            builder.setAutoCancel(true)
+                    .setChannelId(Common.CHANNEL_ID_ARRIVED).
+                    setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)).setContentIntent(pendingIntent);
+
+            buttonIntent.putExtra("notificationId", NOTIFICATION_ID);
+            buttonIntent.putExtra("rider",pickup.getID());
+
+            // builder.setContentIntent(launchIntent);
+            NotificationManager manager = (NotificationManager) getBaseContext().getSystemService(Context.NOTIFICATION_SERVICE);
+
+            manager.cancel(NOTIFICATION_ID);
+            builder.addAction(android.R.drawable.ic_delete, "رفض", dismissIntent);
+            builder.addAction(android.R.drawable.ic_menu_view, "موافقة", pendingIntent);
+            buildNotification(NOTIFICATION_ID);
+        }
+        catch (Exception ex) {
+            Toast.makeText(this, ""+ex, Toast.LENGTH_SHORT).show();
+        }
+    }
+    private void buildNotification(int NOTIFICATION_ID) {
+        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+
+        // Will display the notification in the notification bar
+        notificationManager.notify(NOTIFICATION_ID, builder.build());
+
+    }
+
+
+
+
+    @Override
+    public void onNewToken(@NonNull String token) {
+        super.onNewToken(token);
+        FirebaseDatabase db=FirebaseDatabase.getInstance();
+        DatabaseReference tokens=db.getReference(Common.token_tbl);
+        if (FirebaseAuth.getInstance().getCurrentUser()!=null)
+            tokens.child(FirebaseAuth.getInstance().getUid())
+                    .setValue(token);
+    }
+}

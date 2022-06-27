@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/away_table">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp">
+    <TableLayout
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <TextView
+                android:layout_weight="1"
+                android:text="Price"
+                android:textSize="20sp"
+                />
+            <EditText
+                android:layout_weight="2"
+                android:hint="price "
+                android:textSize="20sp"
+                android:inputType="number"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_weight="1"
+                android:text="Name"
+                android:textSize="20sp"
+                />
+            <EditText
+                android:layout_weight="2"
+                android:hint="name"
+                android:textSize="20sp"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_weight="1"
+                android:text="Note"
+                android:textSize="20sp"
+                />
+            <EditText
+                android:layout_weight="2"
+                android:hint="note"
+                android:textSize="20sp"
+                />
+        </TableRow>
+<!--        <TableRow>-->
+<!--            <TextView-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="price"-->
+<!--                android:textSize="20sp"-->
+<!--                />-->
+<!--            <EditText-->
+<!--                android:layout_weight="2"-->
+<!--                android:hint="price"-->
+<!--                android:textSize="20sp"-->
+<!--                />-->
+<!--        </TableRow>-->
+    </TableLayout>
+        <Button
+            android:id="@+id/btn_save_takeawy_details"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:text="Save"
+            android:background="@drawable/custom_save"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

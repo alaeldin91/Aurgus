@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cold"
+    tools:context="com.aurages.ArestaurantWeb.Activity.SyncActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/public_toolbar"
+            style="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/app_blue"
+            app:layout_collapseMode="pin"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title="Sync"
+            app:titleTextColor="#fff" />
+        <RelativeLayout
+            android:layout_below="@+id/public_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/sync_ac_txt"
+                android:layout_below="@+id/sync_ac_img"
+                android:layout_margin="50dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="16sp"
+                android:text="Sync your data to save it in this device so you can begin working , Let's go.."/>
+            <ImageView
+                android:tint="@color/app_blue"
+                android:id="@+id/sync_ac_img"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/cloud_download_outline"/>
+
+            <Button
+                android:id="@+id/sync_ac_btn"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/sync_ac_txt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/cus_btn"
+                android:text="Sync now"
+                android:textColor="@color/antique_white" />
+            <Button
+                android:id="@+id/sync_ac_notNow"
+                android:layout_below="@id/sync_ac_btn"
+                android:layout_centerHorizontal="true"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:text="later"
+                android:visibility="invisible"
+                android:background="@android:color/transparent"/>
+            <Button
+                android:id="@+id/sync_ac_notNow2"
+                android:layout_below="@id/sync_ac_notNow"
+                android:layout_centerHorizontal="true"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:text="later"
+                android:background="@android:color/transparent"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/transbackprog"
+    android:visibility="invisible"
+    android:id="@+id/progressLay">
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/progressBar"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@android:color/white"
+        android:visibility="visible"
+        android:layout_margin="30dp"/>
+</LinearLayout>
+
+</RelativeLayout>

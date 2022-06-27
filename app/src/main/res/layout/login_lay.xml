@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent">
+
+    <androidx.cardview.widget.CardView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp">
+
+    <LinearLayout
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!--<androidx.appcompat.widget.AppCompatEditText-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:background="@drawable/background_rectangle"-->
+            <!--android:id="@+id/log_username"-->
+            <!--android:padding="5dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Type your username"-->
+            <!--android:inputType="text"-->
+            <!--android:gravity="left"/>-->
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/log_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background_rectangle"
+            android:hint="Type your password"
+            android:inputType="textPassword"
+            android:padding="5dp"
+            android:gravity="left"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/log_btn"
+            android:drawablePadding="10dp"
+            android:textColor="#154DFF"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:drawableRight="@drawable/ic_send_black_24dp"
+            android:background="@drawable/background_rectangle_btnn"
+            android:text="Login"/>
+
+        <ProgressBar
+            android:id="@+id/log_ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+
+
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

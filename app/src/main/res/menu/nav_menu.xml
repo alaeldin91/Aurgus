@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:checkableBehavior="single">
+
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_menu_sync"
+            android:icon="@drawable/ic_sync_data"
+
+            android:title="SYNCHRONIZE DATA" />
+        <item
+            android:id="@+id/nav_menu_setting"
+            android:icon="@drawable/ic_nav_settings"
+            android:title="SETTINGS" />
+        <item
+            android:id="@+id/nav_menu_check_update"
+            android:icon="@drawable/ic_check_updates"
+            android:title="CHECK FOR UPDATES" />
+        <item
+            android:id="@+id/nav_menu_about"
+            android:icon="@drawable/ic_nav_about"
+            android:title="ABOUT" />
+
+        <item
+            android:id="@+id/nav_menu_active"
+            android:icon="@drawable/ic_nav_verified"
+            android:title="ACTIVE" />
+        <item
+            android:id="@+id/nav_menu_log_error"
+            android:icon="@drawable/ic_error_log"
+            android:title="LOG ERROR" />
+        <item
+            android:id="@+id/nav_menu_login_ac"
+            android:icon="@drawable/ic_exit_app"
+            android:title="LOGOUT" />
+
+    </group>
+</menu>

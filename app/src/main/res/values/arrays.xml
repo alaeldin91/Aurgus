@@ -1,0 +1,31 @@
+<resources>
+    <string-array name="NumColMats">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+
+    <string-array name="AskOrderType">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="AskOrderType_Val">
+        <item>Take Away</item>
+        <item>Dine In</item>
+        <item>Ask First</item>
+    </string-array>
+    <string-array name="kind_printer">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+</resources>

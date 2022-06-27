@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="app_name">SecurityModule</string>
+	<string name="name">Your Name</string>
+	<string name="email">Email</string>
+	<string name="activation">Activation</string>
+	<string name="close">Close</string>
+	<string name="request_activation">Request Activation</string>
+	<string name="phone">Phone</string>
+	<string name="address">Address</string>
+	<string name="remark">Remark</string>
+	<string name="please_wait">Please Wait</string>
+	<string name="validating_sec_settings">Validating Activation  #8230;</string>
+	<string name="IMEI">IMEI</string>
+	<string name="Active_key">Key</string>
+</resources>

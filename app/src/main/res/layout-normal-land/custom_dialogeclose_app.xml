@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/cold"
+    tools:ignore="MissingDefaultResource">
+   <TextView
+       android:id="@+id/txt_close"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="are you sure close app"
+       android:textSize="20dp"
+       android:gravity="center"
+       android:layout_margin="20dp"
+       android:textColor="@color/text"></TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/txt_close"
+        >
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cancel"
+            android:background="@drawable/shape_logoutt_btn_background"
+            ></Button>
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ok"
+            android:background="@drawable/shape_logoutt_btn_background"
+            ></Button>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

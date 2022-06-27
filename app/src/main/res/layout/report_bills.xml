@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Report_Bills">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:navigationIcon="@drawable/icbackspace_toolbar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title="Report Bills"
+            app:titleTextColor="#fff" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/report_card_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--<TableRow-->
+                    <!--android:gravity="center"-->
+                    <!--android:padding="5dp">-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:padding="5dp"-->
+                    <!--android:text="From"-->
+                    <!--android:textSize="18sp"-->
+                    <!--android:textStyle="bold" />-->
+
+                    <!--<TextView-->
+                    <!--android:drawableRight="@drawable/ic_date_"-->
+                    <!--android:id="@+id/cal_from"-->
+                    <!--android:background="#AEDAD1"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:padding="5dp"-->
+                    <!--android:text="..."-->
+                    <!--android:textSize="18sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:drawableEnd="@drawable/ic_date_" />-->
+
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:padding="5dp"-->
+                    <!--android:text="To"-->
+                    <!--android:textSize="18sp"-->
+                    <!--android:textStyle="bold" />-->
+
+                    <!--<TextView-->
+                    <!--android:drawableRight="@drawable/ic_date_"-->
+                    <!--android:id="@+id/cal_to"-->
+                    <!--android:background="#AEDAD1"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:padding="5dp"-->
+                    <!--android:text="..."-->
+                    <!--android:textSize="18sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:drawableEnd="@drawable/ic_date_" />-->
+
+                    <!--</TableRow>-->
+
+                </TableLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical">
+
+                    <TableRow
+                        android:gravity="center_vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:text="Bill type"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/spinner1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:drawable/btn_dropdown"
+                            android:spinnerMode="dropdown" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:text="To"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#AEDAD1"
+                            android:drawableEnd="@drawable/ic_date_"
+                            android:drawableRight="@drawable/ic_date_"
+                            android:padding="5dp"
+                            android:text="..."
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:visibility="invisible" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:gravity="center"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:text="From"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/cal_from"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#AEDAD1"
+                            android:drawableEnd="@drawable/ic_date_"
+                            android:drawableRight="@drawable/ic_date_"
+                            android:padding="5dp"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:text="To"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/cal_to"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#AEDAD1"
+                            android:drawableEnd="@drawable/ic_date_"
+                            android:drawableRight="@drawable/ic_date_"
+                            android:padding="5dp"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnDoReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:drawableRight="@drawable/ic_send_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:text="Go"
+                    android:textColor="#1A2750"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:strokeColor="@color/colorPrimaryDark" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+<!--
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow
+                android:id="@+id/b_first_row"
+                android:visibility="gone">
+                <TextView
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:text="Number"
+                    android:textSize="20sp"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:text="BillKind"
+                    android:textSize="20sp"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:text="Host Code"
+                    android:textSize="20sp"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:text="Date"
+                    android:textSize="20sp"
+                    android:layout_weight="1"
+                    />
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/b_no"
+                    android:text="Number"
+                    android:textSize="20sp"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:id="@+id/b_d_no"
+                    android:text="DailyNumber"
+                    android:textSize="20sp"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:id="@+id/b_date"
+                    android:text="Date"
+                    android:textSize="20sp"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:id="@+id/b_table_code"
+                    android:text="TableCode"
+                    android:textSize="20sp"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:id="@+id/b_total"
+                    android:text="Total"
+                    android:textSize="20sp"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:id="@+id/b_discount"
+                    android:text="Discount"
+                    android:textSize="20sp"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:id="@+id/b_tax"
+                    android:text="Tax"
+                    android:textSize="20sp"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:id="@+id/b_end_total"
+                    android:text="End Total"
+                    android:textSize="20sp"
+                    android:layout_weight="1"
+                    />
+
+            </TableRow>
+        </TableLayout>-->
+
+        <WebView
+            android:id="@+id/bill_webView"
+            android:layout_width ="match_parent"
+            android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/_report_bills">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_bill_report"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    android:paddingBottom="60dp"/>
+            </LinearLayout>
+            </ScrollView>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bill_table_layout"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:visibility="visible"
+            >
+            <TextView
+                android:textStyle="bold"
+                android:background="@android:color/white"
+                android:padding="5dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="---------------"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:textStyle="bold"
+                android:background="@android:color/white"
+                android:padding="5dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="---------------"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:textStyle="bold"
+                android:background="@android:color/white"
+                android:padding="5dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="---------------"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:textStyle="bold"
+                android:background="@android:color/white"
+                android:padding="5dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="---------------"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:textStyle="bold"
+                android:background="@android:color/white"
+                android:padding="5dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="---------------"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:textStyle="bold"
+                android:background="@android:color/white"
+                android:padding="5dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="---------------"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:textStyle="bold"
+                android:background="@android:color/white"
+                android:padding="5dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="---------------"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:textStyle="bold"
+                android:background="@android:color/white"
+                android:padding="5dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="---------------"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:id="@+id/table_row1">
+            <TextView
+                android:textStyle="bold"
+                android:background="@drawable/rectangle_bg"
+                android:layout_margin="1dp"
+                android:padding="5dp"
+                android:layout_height="56dp"
+                android:gravity="center"
+                android:id="@+id/b_no1"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:textStyle="bold"
+                android:background="@drawable/rectangle_bg"
+                android:layout_margin="1dp"
+                android:padding="5dp"
+                android:layout_height="56dp"
+                android:gravity="center"
+                android:id="@+id/b_d_no1"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:textStyle="bold"
+                android:background="@drawable/rectangle_bg"
+                android:layout_margin="1dp"
+                android:padding="5dp"
+                android:layout_height="56dp"
+                android:gravity="center"
+                android:id="@+id/b_date1"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:textStyle="bold"
+                android:background="@drawable/rectangle_bg"
+                android:layout_margin="1dp"
+                android:padding="5dp"
+                android:layout_height="56dp"
+                android:gravity="center"
+                android:id="@+id/b_table_code1"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:textStyle="bold"
+                android:background="@drawable/rectangle_bg"
+                android:layout_margin="1dp"
+                android:padding="5dp"
+                android:layout_height="56dp"
+                android:gravity="center"
+                android:id="@+id/b_total1"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:textStyle="bold"
+                android:background="@drawable/rectangle_bg"
+                android:layout_margin="1dp"
+                android:padding="5dp"
+                android:layout_height="56dp"
+                android:gravity="center"
+                android:id="@+id/b_discount1"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:textStyle="bold"
+                android:background="@drawable/rectangle_bg"
+                android:layout_margin="1dp"
+                android:padding="5dp"
+                android:layout_height="56dp"
+                android:gravity="center"
+                android:id="@+id/b_tax1"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:textStyle="bold"
+                android:background="@drawable/rectangle_bg"
+                android:layout_margin="1dp"
+                android:padding="5dp"
+                android:layout_height="56dp"
+                android:gravity="center"
+                android:id="@+id/b_end_total1"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                />
+
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>
+
+        </WebView>
+    </LinearLayout>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/colorAccent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/no_results_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No results found"
+        android:textSize="20sp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>

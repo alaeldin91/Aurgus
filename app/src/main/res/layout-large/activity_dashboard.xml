@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constants"
+    android:background="@color/white_smoke">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/dashboardAppBar"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/app_blue"
+        android:elevation="0dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitle="welcome back!"
+        app:subtitleTextAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:subtitleTextColor="@color/orange"
+        app:title="AURAGES POS"
+        app:titleTextColor="@color/white"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:elevation="10dp"
+        app:cardBackgroundColor="@color/cold"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="30dp"
+        app:cardMaxElevation="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dashboardAppBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/dashboardTimeDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="12:00 "
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.723"
+                app:layout_constraintStart_toEndOf="@+id/dashboardCashierNameTextView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/dashboardStartWorkButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/circular_button_background"
+                android:text="START"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/dashboardCashierNameTextView"
+                app:layout_constraintTop_toBottomOf="@+id/dashboardTimeDate"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/dashboardCashierNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+
+                android:fontFamily="serif-monospace"
+                android:text="alaeldin musa"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageView"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/userimg"
+                app:civ_border_color="@color/blue"
+                app:civ_border_width="0.8dip"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/cold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cardView2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+        <Button
+            android:id="@+id/dashboardOpenInfoButton"
+            android:layout_width="0dp"
+
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+
+            android:background="@color/cold"
+            android:drawableTop="@mipmap/ic_dash_info"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/colorAccent"
+            android:text="ABOUT"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/dashboardOpenActiveButton"
+            app:layout_constraintTop_toBottomOf="@+id/dashboardOpenCashoutButton" />
+
+        <Button
+            android:id="@+id/dashboardOpenCashoutButton"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+
+
+            android:background="@color/cold"
+            android:drawableTop="@mipmap/ic_dash_cashout"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/colorAccent"
+
+            android:text="CASH OUT"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/dashboardOpenInfoButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/dashboardOpenPinCodeButton"
+            app:layout_constraintTop_toBottomOf="@+id/dashboardOpenBillsButton" />
+
+        <Button
+            android:id="@+id/dashboardOpenActiveButton"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+
+            android:background="@color/cold"
+            android:drawableTop="@mipmap/ic_approved"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/colorAccent"
+
+            android:text="ACTIVE"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/dashboardOpenInfoButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/dashboardOpenSettingsButton"
+            app:layout_constraintTop_toBottomOf="@+id/dashboardOpenPinCodeButton" />
+
+        <Button
+            android:id="@+id/dashboardOpenSettingsButton"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+
+            android:background="@color/cold"
+            android:drawableTop="@mipmap/ic_dash_settings"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/colorAccent"
+
+            android:text="SETTINGS"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/dashboardOpenActiveButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dashboardOpenRemoveButton" />
+
+        <Button
+            android:id="@+id/dashboardOpenBillsButton"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/cold"
+            android:drawableTop="@mipmap/ic_dash_bills"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/colorAccent"
+
+            android:text="BILLS"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/dashboardOpenCashoutButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/dashboardOpenOrdersButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/dashboardOpenRemoveButton"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+
+            android:background="@color/cold"
+            android:drawableTop="@mipmap/ic_dash_remove"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/colorAccent"
+
+            android:text="REMOVE"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/dashboardOpenSettingsButton"
+            app:layout_constraintEnd_toStartOf="@+id/dashboardOpenPinCodeButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dashboardOpenReportsButton" />
+
+        <Button
+            android:id="@+id/dashboardOpenPinCodeButton"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+
+            android:background="@color/cold"
+            android:drawableTop="@mipmap/ic_dash_code"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/colorAccent"
+
+            android:text="PIN CODE"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/dashboardOpenActiveButton"
+            app:layout_constraintEnd_toStartOf="@+id/dashboardOpenCashoutButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/dashboardOpenRemoveButton"
+            app:layout_constraintTop_toBottomOf="@+id/dashboardOpenOrdersButton" />
+
+        <Button
+            android:id="@+id/dashboardOpenReportsButton"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/cold"
+
+            android:drawableTop="@mipmap/ic_dash_report"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/colorAccent"
+
+            android:text="REPORTS"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/dashboardOpenRemoveButton"
+            app:layout_constraintEnd_toStartOf="@+id/dashboardOpenOrdersButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/dashboardOpenOrdersButton"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/cold"
+            android:drawableTop="@mipmap/ic_pos"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/colorAccent"
+            android:text="ORDERS"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/dashboardOpenPinCodeButton"
+            app:layout_constraintEnd_toStartOf="@+id/dashboardOpenBillsButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/dashboardOpenReportsButton"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

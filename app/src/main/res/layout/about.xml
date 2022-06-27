@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activity.About">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/public_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:layout_collapseMode="pin"
+            style="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title="About"
+            app:titleTextColor="#fff"/>
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/colorAccent"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=" SamaRatih "
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="#FFFFFFFF" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textView1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="Madina-KSA"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="#5454f4" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textView15"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="Tel : +966 532112626"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#00006F" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="Mob:+966532113030"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#00006F" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="Khartoom - Sudan"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="#5454f4" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="Tel:+249906190687"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#00006F" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="Mob:+249995694416"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#00006F" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textVersion"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="Version 1.0.0.1"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#FF0000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textAndroid"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="Android 2.0 + 4.0"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#0000FF" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textView12"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="www.Aurages.com"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#00006F" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/buttonInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Info System" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

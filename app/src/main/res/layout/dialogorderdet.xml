@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rectanglebg">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/temp_order_rec"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:layout_above="@+id/f_close"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:backgroundTint="@android:color/transparent"
+        android:src="@drawable/userimg"
+        android:id="@+id/f_close"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        />
+
+
+
+<!--    <include layout="@layout/adapter_allbillsview"/>-->
+<!--    <include layout="@layout/adapter_allbillsview"/>-->
+<!--    <include layout="@layout/adapter_allbillsview"/>-->
+<!--    <include layout="@layout/adapter_allbillsview"/>-->
+<!--    <include layout="@layout/adapter_allbillsview"/>-->
+<!--    <include layout="@layout/adapter_allbillsview"/>-->
+
+
+
+
+
+</RelativeLayout>

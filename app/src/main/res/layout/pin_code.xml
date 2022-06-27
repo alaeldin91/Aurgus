@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:numpad="http://schemas.android.com/apk/res-auto"
+    tools:context="com.aurages.ArestaurantWeb.Activity.PinCodeAc"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/pin_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <TextView
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:id="@+id/pin_txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ENTER PASSCODE"
+            android:textSize="30sp"
+            android:padding="10dp"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_below="@+id/pin_txt1"
+            android:id="@+id/pin_txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please enter your passcode"
+            android:textSize="20sp"
+            android:padding="1dp"
+            android:layout_centerHorizontal="true"/>
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_below="@+id/pin_txt2"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:id="@+id/reset_phone_email"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="10dp"-->
+<!--            numpad:cardBackgroundColor="@android:color/transparent"-->
+<!--            >-->
+
+            <LinearLayout
+                android:layout_below="@+id/pin_txt2"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:gravity="center_horizontal"
+                android:id="@+id/reset_phone_email">
+
+                <com.alimuzaffar.lib.pin.PinEntryEditText
+                    android:id="@+id/txt_pin_entry"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:digits="1234567890"
+                    android:inputType="numberPassword"
+                    android:layoutDirection="ltr"
+                    android:maxLength="4"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textSize="16sp"
+                    />
+
+                <!--android:textIsSelectable="false" //recommended-->
+                <!--android:textSize="20sp"-->
+                <!--app:pinBackgroundDrawable="@drawable/bg_pin" //optional, use your own pin char background-->
+                <!--app:pinAnimationType="popIn|fromBottom|none" //optional, default popIn-->
+                <!--app:pinCharacterMask="*" //optional, default bullet-->
+                <!--app:pinSingleCharHint="#" //optional, hint for each characters-->
+                <!--app:pinTextBottomPadding="@dimen/space" //optional, space between character and bottom line.-->
+                <!--app:pinLineStroke="2dp" //the stroke (height) of the bottom line by default.-->
+                <!--app:pinLineStrokeSelected="4dp" //the stroke (height) of the bottom line when field is focused.-->
+                <!--app:pinBackgroundIsSquare="true|false" //optional, if you want the background drawable to be a square or circle width of each digit will be set to match the height of the widget.-->
+                <!--app:pinLineColors="@color/pin_line_colors" //optional-->
+
+            </LinearLayout>
+<!--        </androidx.cardview.widget.CardView>-->
+
+        <androidx.cardview.widget.CardView
+            android:layout_below="@+id/reset_phone_email"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            numpad:cardBackgroundColor="@android:color/transparent">
+
+            <LinearLayout
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:gravity="center_horizontal">
+
+
+
+                <!--android:textIsSelectable="false" //recommended-->
+                <!--android:textSize="20sp"-->
+                <!--app:pinBackgroundDrawable="@drawable/bg_pin" //optional, use your own pin char background-->
+                <!--app:pinAnimationType="popIn|fromBottom|none" //optional, default popIn-->
+                <!--app:pinCharacterMask="*" //optional, default bullet-->
+                <!--app:pinSingleCharHint="#" //optional, hint for each characters-->
+                <!--app:pinTextBottomPadding="@dimen/space" //optional, space between character and bottom line.-->
+                <!--app:pinLineStroke="2dp" //the stroke (height) of the bottom line by default.-->
+                <!--app:pinLineStrokeSelected="4dp" //the stroke (height) of the bottom line when field is focused.-->
+                <!--app:pinBackgroundIsSquare="true|false" //optional, if you want the background drawable to be a square or circle width of each digit will be set to match the height of the widget.-->
+                <!--app:pinLineColors="@color/pin_line_colors" //optional-->
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+<!--        <com.davidmiguel.numberkeyboard.NumberKeyboard-->
+<!--            android:id="@+id/pin_code_keybad"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            keyboard:numberkeyboard_keyboardType="integer" />-->
+
+<!--        <com.konaire.numerickeyboard.NumericKeyboard-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:layout_marginBottom="@dimen/gap"-->
+<!--            app:field="@+id/code"-->
+<!--            app:keyTextColor="@color/green" />-->
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

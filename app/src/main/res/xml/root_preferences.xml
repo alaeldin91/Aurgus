@@ -1,0 +1,113 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="key_root">
+    <PreferenceScreen
+        android:key="key_screen_one"
+        android:title="@string/Connection">
+        <PreferenceCategory android:title="Type">
+            <SwitchPreferenceCompat
+                android:key="Type_Online"
+                android:summaryOff="Sql"
+                android:summaryOn="Api"
+                android:title="@string/Status" />
+            <SwitchPreferenceCompat
+                android:key="Status"
+                android:summaryOff="offline"
+                android:summaryOn="online"
+                android:title="@string/Status" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="Connection SQL">
+            <EditTextPreference
+                android:hint="@string/Server"
+                android:key="Server"
+                android:summary="@string/Server"
+                android:title="@string/Server" />
+
+            <EditTextPreference
+                android:hint="@string/DataBase"
+                android:key="DataBase"
+                android:title="@string/DataBase" />
+
+            <EditTextPreference
+                android:hint="@string/User"
+                android:key="User"
+                android:title="@string/User" />
+
+            <EditTextPreference
+                android:hint="@string/Pass"
+                android:key="Pass"
+                android:title="@string/Pass" />
+
+
+        </PreferenceCategory>
+        <PreferenceCategory android:title="Connection Api">
+
+            <EditTextPreference
+                android:hint="Url"
+                android:key="Url"
+                android:title="Url" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:key="key_screen_tow"
+        android:title="Orders">
+        <PreferenceCategory android:title="sync_header">
+            <CheckBoxPreference
+                android:key="useit"
+                android:title="@string/Orders" />
+
+            <ListPreference
+                android:defaultValue="2"
+                android:entries="@array/NumColMats"
+                android:entryValues="@array/NumColMats"
+                android:key="Column_Grid_Mats"
+                android:summary="%s"
+                android:title="@string/NumColumnGridMats" />
+
+            <ListPreference
+                android:defaultValue="2"
+                android:entries="@array/AskOrderType_Val"
+                android:entryValues="@array/AskOrderType"
+                android:key="AskOrderType"
+                android:summary="%s"
+                android:title="@string/AskForOrderType" />
+            <EditTextPreference
+                android:defaultValue="0"
+                android:hint="@string/Tax"
+                android:key="Tax"
+                android:title="@string/Tax" />
+            <EditTextPreference
+                android:hint="12 AM"
+                android:key="close_time"
+                android:title="@string/colse_time" />
+
+        </PreferenceCategory>
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:key="key_screen_Three"
+        android:title="Screen">
+        <PreferenceCategory android:title="Screen Appearance">
+        <EditTextPreference
+            android:hint="4"
+            android:key="table_element"
+            android:title="Elements tables"
+            android:defaultValue="4"/>
+        <EditTextPreference
+            android:hint="1"
+            android:key="group_element"
+            android:title="Elements Groups"
+            android:defaultValue="1"/>
+        <EditTextPreference
+            android:hint="4"
+            android:key="mat_element"
+            android:title="Elements materials"
+            android:defaultValue="4"/>
+        <EditTextPreference
+            android:hint="1"
+            android:key="note_element"
+            android:title="Elements notes"
+            android:defaultValue="1"/>
+        </PreferenceCategory>
+    </PreferenceScreen>
+
+</PreferenceScreen>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.aurages.ArestaurantWeb">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"></uses-permission>
+
+
+    <application
+        android:name=".Aurages"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@drawable/pos_white"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/security_config"
+        android:roundIcon="@drawable/tagss"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+
+
+        tools:replace="android:name">
+        <receiver android:name=".Adapter.Intrenetchange" >
+        <intent-filter>
+            <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+        </intent-filter>
+        </receiver>
+
+        <activity android:name=".Activity.SplashActivity"
+          android:screenOrientation="landscape"
+            >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.NewLoginActivity"
+            android:screenOrientation="landscape"
+            >
+
+        </activity>
+        <activity android:name=".Activity.DashboardActivity"
+            android:screenOrientation="landscape"
+            />
+        <activity
+            android:name=".Activity.Tablayout"
+            android:excludeFromRecents="true"
+            android:theme="@style/AppDialogTheme"
+            android:screenOrientation="landscape"            />
+        <activity
+            android:name=".Activity.PinCodeAc"
+            android:theme="@style/Orders"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Activity.SyncActivity"
+            android:theme="@style/Orders"
+            android:screenOrientation="landscape"            />
+        <activity
+            android:name=".Activity.About"
+            android:theme="@style/Orders"
+            android:screenOrientation="landscape"
+            />
+        <activity
+            android:name=".Activity.SettingsActivity"
+            android:screenOrientation="landscape"
+            android:label="@string/Settings" />
+        <activity
+            android:name=".Activity.Report_mat_sale"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Activity.Report_Bills"
+            android:theme="@style/Orders"
+            android:screenOrientation="landscape"
+            />
+        <activity
+            android:name=".Activity.Reporting"
+            android:theme="@style/Orders"
+            android:screenOrientation="landscape"
+            />
+        <activity
+            android:name=".Activity.Error_log_ac"
+            android:theme="@style/Orders"
+            android:screenOrientation="landscape"
+            />
+        <activity
+            android:name=".Activity.OrdersScreen"
+            android:screenOrientation="landscape"
+            android:theme="@style/Orders"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/blue">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mat_reports">
+
+            <!--<TableRow-->
+                <!--android:id="@+id/b_first_row"-->
+                <!--android:visibility="visible">-->
+
+                <!--<TextView-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="Number"-->
+                    <!--android:textColor="@android:color/black"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:textStyle="bold" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="OrderType"-->
+                    <!--android:textColor="@android:color/black"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:textStyle="bold" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="Host Code"-->
+                    <!--android:textColor="@android:color/black"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:textStyle="bold" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="Qty"-->
+                    <!--android:textColor="@android:color/black"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:textStyle="bold" />-->
+                <!--<TextView-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="Host Code"-->
+                    <!--android:textColor="@android:color/black"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:textStyle="bold" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="Qty"-->
+                    <!--android:textColor="@android:color/black"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:textStyle="bold" />-->
+
+            <!--</TableRow>-->
+            <TableRow
+                android:id="@+id/invisible_row"
+                android:gravity="center"
+                android:layout_height="1dp"
+                android:background="@android:color/white">
+
+            <TextView
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:text="----------------------------------------"
+                android:textSize="20sp"
+                android:background="@android:color/white"
+                android:layout_margin="1dp"
+                />
+            <TextView
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:text="----------------------------------------"
+                android:textSize="20sp"
+                android:background="@android:color/white" />
+            <TextView
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:text="----------------------------------------"
+                android:textSize="20sp"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"/>
+            <TextView
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:text="----------------------------------------"
+                android:textSize="20sp"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"/>
+            <TextView
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:text="----------------------------------------"
+                android:textSize="20sp"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"/>
+            </TableRow>
+            <TableRow
+                android:gravity="center"
+                android:id="@+id/row_header">
+
+                <TextView
+                    android:id="@+id/b_mat_cod1"
+                    android:layout_weight="1"
+                    android:text="Mat Code"
+                    android:textSize="20sp"
+                    android:background="@android:color/white"
+                    android:layout_margin="1dp"
+                    />
+                <TextView
+                    android:id="@+id/b_mat_name1"
+                    android:layout_weight="1"
+                    android:text="Mat Name"
+                    android:textSize="20sp"
+                    android:background="@android:color/white" />
+                <TextView
+                    android:id="@+id/b_qty1"
+                    android:layout_weight="1"
+                    android:text="Qty"
+                    android:textSize="20sp"
+                    android:layout_margin="1dp"
+                    android:background="@android:color/white"/>
+                <TextView
+                    android:id="@+id/b_price1"
+                    android:layout_weight="1"
+                    android:text="Price"
+                    android:textSize="20sp"
+                    android:layout_margin="1dp"
+                    android:background="@android:color/white"/>
+                <TextView
+                    android:id="@+id/b_total11"
+                    android:layout_weight="1"
+                    android:text="Total"
+                    android:textSize="20sp"
+                    android:layout_margin="1dp"
+                    android:background="@android:color/white"/>
+
+
+            </TableRow>
+            <TableRow
+                android:gravity="center"
+                android:id="@+id/base_row_mat">
+
+                <TextView
+                    android:id="@+id/b_mat_cod"
+                    android:layout_weight="1"
+                    android:text="Mat Code"
+                    android:textSize="20sp"
+                    android:background="@android:color/white"
+                    android:layout_margin="1dp"
+                    />
+                <TextView
+                    android:id="@+id/b_mat_name"
+                    android:layout_weight="1"
+                    android:text="Mat Name"
+                    android:textSize="20sp"
+                    android:background="@android:color/white" />
+                <TextView
+                    android:id="@+id/b_qty"
+                    android:layout_weight="1"
+                    android:text="Qty"
+                    android:textSize="20sp"
+                    android:layout_margin="1dp"
+                    android:background="@android:color/white"/>
+                <TextView
+                    android:id="@+id/b_price"
+                    android:layout_weight="1"
+                    android:text="Price"
+                    android:textSize="20sp"
+                    android:layout_margin="1dp"
+                    android:background="@android:color/white"/>
+                <TextView
+                    android:id="@+id/b_total"
+                    android:layout_weight="1"
+                    android:text="Total"
+                    android:textSize="20sp"
+                    android:layout_margin="1dp"
+                    android:background="@android:color/white"/>
+
+
+            </TableRow>
+        </TableLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
